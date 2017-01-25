@@ -27,7 +27,7 @@ class Contact
   end
 
   def self.find(identifier)
-    @@contacts.map do |x|
+    @@contacts.each do |x|
       if x.id == identifier
         puts "#{x.contact_card}"
         return x

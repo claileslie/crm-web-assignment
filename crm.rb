@@ -4,7 +4,7 @@
 require_relative 'contact'
 require 'sinatra'
 
-# Contact.create("Prudence","Leslie","prudence@live.ca","mama kitty")
+Contact.create("Prudence","Leslie","prudence@live.ca","mama kitty")
 # Contact.create("Oliver","Leslie","oliver@live.ca","daddy kitty")
 # Contact.create("Max", "Leslie", "max@live.ca", "baby kitty")
 
@@ -28,4 +28,9 @@ end
 post '/contacts' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
   redirect to('/')
+end
+
+get '/contacts/1' do
+  @contact = Contact.find(1)
+  erb :show_contact
 end
