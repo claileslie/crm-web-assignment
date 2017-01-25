@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title></title>
-  </head>
-  <body>
-    <h1>Welcome to <%= @crm_app_name %></h1>
-    <p>Main Menu</p>
+<!--
+  <header>Welcome to <%= @crm_app_name %></header>
+  <nav>
     <ul>
-      <li><a href='/contacts'>View all contacts</a></li>
-      <li><a href='/contacts/new'>Add a new contact</a></li>
-    </ul>
-  </body>
-</html>
+      <li><a href='/contacts'>Home</a></li>
+      <li><a href='/contacts/new'>Add a contact</a></li>
+      <li><a href=''>About</a></li>
+    </ul> -->
+  </nav>
+  <main>
+    <h3 class ="contact_header"> There are <span class="number">6</span> contacts </h3>
+    <div class ="home_contacts">
+      <ul>
+        <% Contact.all.each do |contact| %>
+          <li class="list_contacts"><span class ="basic_contact"><%= contact.first_name %> <%= contact.last_name %> (<%=contact.email%>)</span><span class="options"><a href="">Edit</a> | <a href="">Delete</a></span></span></li>
+        <% end %>
+      </ul>
+
+    </div>
+  </main>
+  <!-- <footer>&copy; Bitmaker 2016 </footer> -->

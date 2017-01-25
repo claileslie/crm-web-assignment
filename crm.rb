@@ -27,5 +27,5 @@ end
 
 post '/contacts' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
-  redirect to('/contacts')
+  redirect to('/')
 end
