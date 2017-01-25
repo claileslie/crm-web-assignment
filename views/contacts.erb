@@ -2,6 +2,6 @@
 
 <ul>
   <% Contact.all.each do |contact| %>
-    <li><%= contact.first_name %> <%= contact.last_name %></li>
+    <li><%= contact.first_name %> <%= contact.last_name %> <a href="/contacts/<%=contact.id%>">View</a></li>
   <% end %>
 </ul>
