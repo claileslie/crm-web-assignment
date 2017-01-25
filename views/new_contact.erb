@@ -1,8 +1,24 @@
-<h1>Create New Contact</h1>
-  <form action ='/contacts' method ='post'>
-    <input type='text' name='first_name'/>
-    <input type='text' name='last_name'/>
-    <input type='email' name='email'/>
-    <input type='text' name='note'/>
-    <input type='submit' value='New Contact'/>
+<h1 class="create">Create New Contact</h1>
+  <form class ='new_contact' action ='/contacts' method ='post'>
+    <ul class ='new_contact_list'>
+      <li class ='new_contact_form'>
+        <label for='new_firstname'>First Name:</label>
+        <input type='text' id='new_firstname' name='first_name'/>
+      </li>
+      <li class ='new_contact_form'>
+        <label for="new_lastname" >Last Name:</label>
+        <input type='text' id='new_lastname' name='last_name'/>
+      </li>
+      <li class ='new_contact_form'>
+        <label for='new_email'>Email:</label>
+        <input type='email' id='new_email' name='email'/>
+      </li>
+      <li class ='new_contact_form'>
+        <label for="new_note">Note:</label>
+        <input type='text'id='new_note' name='note'/>
+      </li>
+      <li class ='new_contact_submit'>
+        <input type='submit' value='New Contact'/>
+      </li>
+    </ul>
   </form>

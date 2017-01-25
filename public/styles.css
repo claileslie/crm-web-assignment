@@ -81,3 +81,33 @@ footer {
   display: inline-block;
   font-size: 25%;
 }
+
+/* ADD A CONTACT */
+
+.create {
+  background-color: salmon;
+  text-align: center;
+}
+
+.new_contact {
+  display: block;
+  background-color: #56F2C0;
+}
+
+.new_contact_form {
+  list-style: none;
+  padding: 1%;
+}
+
+.new_contact_list {
+  padding: 2%;
+}
+
+.new_contact_form label {
+  display: block;
+}
+
+.new_contact_submit {
+  list-style: none;
+  padding: 1%;
+}
