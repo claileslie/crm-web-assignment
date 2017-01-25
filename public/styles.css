@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, verdana, sans-serif;
 }
-
+/* LAYOUT */
 header {
   display: block;
   background-color: #1B2631;
@@ -32,6 +32,18 @@ nav ul li {
   margin: 0px 1px 1px 1px;
   font-weight: bold;
 }
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 10px;
+  padding:10px;
+  display: block;
+}
+
+/*HOMEPAGE*/
 
 .contact_header {
   background-color: #FA8072;
@@ -68,14 +80,4 @@ nav ul li {
 .options {
   display: inline-block;
   font-size: 25%;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-weight: lighter;
-  font-size: 10px;
-  padding:10px;
-  display: block;
 }

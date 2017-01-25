@@ -12,6 +12,7 @@ class Contact
 
   @@contacts = []
   @@next_id = 1
+  @@counter = 0
 
   def self.create(first_name, last_name, email, note) # use .create method when adding method, not .new
     # 1. initialize a new contact with a unique id
@@ -44,6 +45,7 @@ class Contact
 
   def self.delete_all
     @@contacts = []
+    @@counter = 0
   end
 
   def initialize(first_name, last_name, email, note)
@@ -53,6 +55,7 @@ class Contact
     @email = email
     @note = note
     @@next_id += 1
+    @@counter += 1
   end
 
   def full_name
@@ -70,6 +73,7 @@ class Contact
 
   def delete
     @@contacts.delete(self)
+    @@counter -= 1
   end
 
 end
