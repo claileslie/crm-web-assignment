@@ -53,17 +53,17 @@ get '/contacts/:id/edit' do
   end
 end
 
-put 'contacts/:id' do
+put '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
   if @contact
-    @contact.first_name = params[:first_name]
-    @contact.last_name = params[:last_name]
-    @contact.email = params[:email]
-    @contact.note = params[:note]
+    @contact.update(first_name: params[:first_name])
+    @contact.update(last_name: params[:last_name])
+    @contact.update(email: params[:email])
+    @contact.update(note: params[:note])
 
     redirect to('/contacts')
-  else
-    raise Sinatra::NotFound
+  # else
+  #   raise Sinatra::NotFound
   end
 end
 
