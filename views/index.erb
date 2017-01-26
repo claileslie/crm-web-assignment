@@ -12,7 +12,7 @@
     <div class ="home_contacts">
       <ul>
         <% Contact.all.each do |contact| %>
-          <li class="list_contacts"><span class ="basic_contact"><%= contact.first_name %> <%= contact.last_name %> (<%=contact.email%>)</span><span class="options"><a href="/contacts/<=% contact.id %>/edit">Edit</a> | <a href="">Delete</a></span></span></li>
+          <li class="list_contacts"><span class ="basic_contact"><%= contact.first_name %> <%= contact.last_name %> (<%=contact.email%>)</span><span class="options"><a href='/contacts/<%= contact.id%>/edit'>Edit</a> | <a href='/contacts/<%= contact.id%>'>Delete</a></span></li>
         <% end %>
       </ul>
 
